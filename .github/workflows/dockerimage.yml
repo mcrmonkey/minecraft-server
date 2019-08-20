@@ -1,0 +1,22 @@
+name: Docker Image build
+
+on:
+  push:
+    branches:
+    - release/*
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag minecraft-server:$(date +%s)
+    - name: Tag the image as latest
+      run: docker tag minecraft-server:$(date +%s) mcrmonkey/minecraft-server:latest
+    - name: Tag the image with release branch
+      run: docker tag minecraft-server:$(date +%s) mcrmonkey/minecraft-server:{branch}
