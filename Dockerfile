@@ -11,7 +11,7 @@ ENV MCVER 1.16.1
 #ADD https://s3.amazonaws.com/Minecraft.Download/versions/${MCVER}/minecraft_server.${MCVER}.jar /minecraft/
 #RUN ln -s /minecraft/minecraft_server.${MCVER}.jar /minecraft/current.jar
 
-ADD https://launcher.mojang.com/v1/objects/a412fd69db1f81db3f511c1463fd304675244077/server.jar /minecraft/
+ADD https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar /minecraft/
 
 WORKDIR /minecraft/world
 
