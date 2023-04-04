@@ -15,4 +15,6 @@ ADD https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade533
 
 WORKDIR /minecraft/world
 
+EXPOSE 25565/tcp
+
 CMD ["/minecraft/go.sh"]
