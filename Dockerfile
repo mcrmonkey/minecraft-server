@@ -7,11 +7,11 @@ RUN mkdir -p /minecraft/world
 ADD go.sh /minecraft/
 
 
-ENV MCVER 1.18.1
+ENV MCVER 1.19.4
 #ADD https://s3.amazonaws.com/Minecraft.Download/versions/${MCVER}/minecraft_server.${MCVER}.jar /minecraft/
 #RUN ln -s /minecraft/minecraft_server.${MCVER}.jar /minecraft/current.jar
 
-ADD https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar /minecraft/
+ADD https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar /minecraft/
 
 WORKDIR /minecraft/world
 
